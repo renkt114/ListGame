@@ -1,0 +1,38 @@
+﻿<Window x:Class="ListSLG.window.subWindow.BranchCreateSubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window.subWindow"
+        mc:Ignorable="d"
+        Title="BranchCreateSubWindow" Height="463" Width="426"
+        WindowStyle="None">
+    <Grid>
+        <Button Content="戻る" HorizontalAlignment="Left" Margin="35,390,0,0" VerticalAlignment="Top" Click="CancelButtonClick" Height="30" Width="71"/>
+        <Button Content="作成" HorizontalAlignment="Left" Margin="315,390,0,0" VerticalAlignment="Top" Click="ConfirmButtonClick" Height="30" Width="71"/>
+        <Label Content="以下の将軍をリーダーとし、新たな軍団を作成します" HorizontalAlignment="Left" Margin="35,28,0,0" VerticalAlignment="Top" Width="344"/>
+        <Label x:Name="LeaderLabel" Content="name" HorizontalAlignment="Left" Margin="57,54,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label Content="血縁関係にある以下の将軍も移籍します。" HorizontalAlignment="Left" Margin="35,104,0,0" VerticalAlignment="Top" Width="344"/>
+        <DataGrid x:Name="FamilyDataGrid" AutoGenerateColumns="false" Margin="48,135,48,126">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="名前"
+                                        Binding="{Binding name}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="年数"
+                                        Binding="{Binding years}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="階級"
+                                        Binding="{Binding rank}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="作成後は威信維持コストがかかります。" HorizontalAlignment="Left" Margin="35,336,0,0" VerticalAlignment="Top" Width="344"/>
+        <Label Content="(2軍団目：500、3軍団目：1500、4軍団目：3000)" HorizontalAlignment="Left" Margin="35,355,0,0" VerticalAlignment="Top" Width="344"/>
+
+
+    </Grid>
+</Window>

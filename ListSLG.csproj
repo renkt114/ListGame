@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\csv\generalName.csv" />
+    <None Remove="resources\db\data.db" />
+    <None Remove="resources\image\character\secretary_01.png" />
+    <None Remove="resources\image\irast\titleimage.png" />
+    <None Remove="resources\image\terrain\tile_040-s_16_1.svg" />
+    <None Remove="resources\image\terrain\tile_040.png" />
+    <None Remove="resources\image\unit\Cav1.png" />
+    <None Remove="resources\image\unit\EnCav1.png" />
+    <None Remove="resources\image\unit\EnInf1.png" />
+    <None Remove="resources\image\unit\EnRange1.png" />
+    <None Remove="resources\image\unit\inf1.png" />
+    <None Remove="resources\image\unit\range1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\csv\generalName.csv">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\db\data.db">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\image\character\secretary_01.png" />
+    <Resource Include="resources\image\irast\titleimage.png" />
+    <Resource Include="resources\image\unit\Cav1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\image\terrain\tile_040-s_16_1.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SharpVectors" Version="1.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="resources\publish\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\image\terrain\tile_040.png" />
+    <Resource Include="resources\image\unit\EnCav1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\image\unit\EnInf1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\image\unit\EnRange1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\image\unit\inf1.png" />
+    <Resource Include="resources\image\unit\range1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="resources\text\adviseTextResource.Designer.cs">
+      <DependentUpon>adviseTextResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="resources\text\techInfoTextResource.Designer.cs">
+      <DependentUpon>techInfoTextResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="resources\text\techNameTextResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>techNameTextResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="resources\text\adviseTextResource.resx">
+      <LastGenOutput>adviseTextResource.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="resources\text\techInfoTextResource.resx">
+      <LastGenOutput>techInfoTextResource.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="resources\text\techNameTextResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>techNameTextResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="readme_読んでください.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,218 @@
+﻿<Window x:Class="ListSLG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+        xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:local="clr-namespace:ListSLG"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000"
+        ResizeMode="NoResize">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="システム">
+                    <MenuItem x:Name="SaveMenuItem" Header="セーブ"/>
+                    <Separator/>
+                    <MenuItem x:Name="LoadMenuItem" Header="ロード"/>
+                    <Separator/>
+                    <MenuItem x:Name="GameExit" Header="ゲーム終了" Click="SystemGameExit"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <Grid Height="620" Width="980" Margin="0,0,0,0">
+            <TabControl x:Name="mainTab" Margin="35,25,50,271" Grid.ColumnSpan="2" >
+                <TabItem Header="将軍一覧">
+                    <Grid Background="#FFE5E5E5" Height="345">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10*"/>
+                            <RowDefinition Height="13*"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid x:Name="allGenerals" AutoGenerateColumns="false" Grid.RowSpan="2" CanUserSortColumns="False" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="名前"
+                                        Binding="{Binding general.name}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="階級"
+                                        Binding="{Binding general.rank}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="年数"
+                                        Binding="{Binding general.years}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="所属"
+                                        Binding="{Binding corp.corpName}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="配偶予定将軍"
+                                        Binding="{Binding partnerGeneral.name}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="昇格予定"
+                                        Binding="{Binding promotionFlg}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                                <DataGridTextColumn Header="解任予定"
+                                        Binding="{Binding retireFlg}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <Button Content="計画" HorizontalAlignment="Left" Margin="27,422,0,0" VerticalAlignment="Top" Click="Planning_Phase_Button_Click" Height="23" Width="72"/>
+            <Button Content="技術" HorizontalAlignment="Left" Margin="27,471,0,0" VerticalAlignment="Top" Click="Tech_Window_Button_Click" Height="23" Width="72"/>
+            <Grid Margin="117,380,387,24">
+                <Grid x:Name="AllSumGrid"  Margin="28,10,28,173">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="64*"/>
+                        <ColumnDefinition Width="63*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="104*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="軍団数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="48"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="3,6,3,5" Grid.Column="1" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock Name="SumCorpNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="総将軍数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="8,6,8,5" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock Name="SumGeneralNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="総兵数" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="10,5,10,6" Grid.Column="7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock Name="SumSoldierNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Border>
+                    <GroupBox Header="軍団情報" Margin="10,51,0,-12"/>
+                </Border>
+                <Grid x:Name="Corp1SumGrid" Margin="28,68,28,115">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="127*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="104*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Corp1NameLabel" Content="corp1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="128"/>
+                    <Label Content="将軍数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="8,6,8,5" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp1GeneralNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="兵数" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="10,5,10,6" Grid.Column="7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp1SoldierNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Grid x:Name="Corp2SumGrid" Margin="28,108,28,75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="127*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="104*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Corp2NameLabel" Content="corp2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="128"/>
+                    <Label Content="将軍数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="8,6,8,5" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp2GeneralNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="兵数" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="10,5,10,6" Grid.Column="7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp2SoldierNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Grid x:Name="Corp3SumGrid" Margin="28,146,28,37">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="127*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="104*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Corp3NameLabel" Content="corp3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="128"/>
+                    <Label Content="将軍数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="8,6,8,5" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp3GeneralNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="兵数" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="10,5,10,6" Grid.Column="7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp3SoldierNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Grid x:Name="Corp4SumGrid" Margin="28,184,28,-1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="127*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="104*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Corp4NameLabel" Content="corp4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="128"/>
+                    <Label Content="将軍数" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="3"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="8,6,8,5" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp4GeneralNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                    <Label Content="兵数" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="62" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="2,2,0.5,0.5" Margin="10,5,10,6" Grid.Column="7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <TextBlock x:Name="Corp4SoldierNumTextBlock" HorizontalAlignment="Right" Margin="0,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="60" Margin="638,401,0,0" VerticalAlignment="Top" Width="292">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="86*"/>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="29*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="EraLabel" Grid.Column="0" Content="XXの時代" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="22" />
+                <Label x:Name="TermLabel" Grid.Column="1" Content="X期" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="18" />
+                <Label x:Name="SectionLabel" Grid.Column="2" Content="X節" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="18" />
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="68" Margin="610,471,0,0" VerticalAlignment="Top" Width="347">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="26*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="88*"/>
+                    <ColumnDefinition Width="85*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="104*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="威信"  VerticalAlignment="Center" Height="26" Width="90" HorizontalContentAlignment="Right"  />
+                <Label x:Name="PrestageNumLabel" Grid.Column="1" Content="1000" VerticalAlignment="Center" Height="26" Width="80"  HorizontalContentAlignment="Right"  />
+                <Label Content="今期消費威信" Grid.Row="1"  VerticalAlignment="Center" Height="26" Width="90" HorizontalContentAlignment="Right"  />
+                <Label x:Name="PrestageCostNumLabel" Grid.Row="1" Grid.Column="1" Content="0"  VerticalAlignment="Center" Height="26" Width="80" HorizontalContentAlignment="Right"  />
+            </Grid>
+            <Button Content="Next" HorizontalAlignment="Left" Margin="813,553,0,0" VerticalAlignment="Top" Height="43" Width="117" Click="Next_Button_Click"/>
+            <Button Content="BattleDebugWindow" HorizontalAlignment="Left" Margin="27,490,0,0" VerticalAlignment="Top" Width="72" Click="BattleDebugWindow_Button_Click" Height="0" />
+            <Button Content="GenerateDebugWindow" HorizontalAlignment="Left" Margin="27,538,0,0" VerticalAlignment="Top" Width="72" Click="GenerateDebugWindow_Button_Click" Height="0" />
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,86 @@
+﻿<Window x:Class="ListSLG.window.debug.GenerateDebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window.debug"
+        mc:Ignorable="d"
+        Title="GenerateDebugWindow" Height="450" Width="800">
+    <Grid>
+
+        <TextBox  x:Name="bAtcNum" HorizontalAlignment="Left" Margin="85,101,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bDefNum" HorizontalAlignment="Left" Margin="131,101,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bManNum" HorizontalAlignment="Left" Margin="177,101,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbAtcNum" HorizontalAlignment="Left" Margin="236,62,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbDefNum" HorizontalAlignment="Left" Margin="282,62,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbManNum" HorizontalAlignment="Left" Margin="328,62,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpAtcNum" HorizontalAlignment="Left" Margin="236,137,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpDefNum" HorizontalAlignment="Left" Margin="282,137,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpManNum" HorizontalAlignment="Left" Margin="328,137,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbbAtcNum" HorizontalAlignment="Left" Margin="399,25,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbbDefNum" HorizontalAlignment="Left" Margin="445,25,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbbManNum" HorizontalAlignment="Left" Margin="491,25,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbpAtcNum" HorizontalAlignment="Left" Margin="399,80,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbpDefNum" HorizontalAlignment="Left" Margin="445,80,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbpManNum" HorizontalAlignment="Left" Margin="491,80,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpbAtcNum" HorizontalAlignment="Left" Margin="399,120,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpbDefNum" HorizontalAlignment="Left" Margin="445,120,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpbManNum" HorizontalAlignment="Left" Margin="491,120,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bppAtcNum" HorizontalAlignment="Left" Margin="399,165,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bppDefNum" HorizontalAlignment="Left" Margin="445,165,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bppManNum" HorizontalAlignment="Left" Margin="491,165,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="pAtcNum" HorizontalAlignment="Left" Margin="85,235,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="pDefNum" HorizontalAlignment="Left" Margin="131,235,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="pManNum" HorizontalAlignment="Left" Margin="177,235,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <Label x:Name="gAtcNum" Content="0" HorizontalAlignment="Left" Margin="173,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gDefNum" Content="0" HorizontalAlignment="Left" Margin="194,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gManNum" Content="0" HorizontalAlignment="Left" Margin="215,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gAtcGrowthNum" Content="0" HorizontalAlignment="Left" Margin="173,372,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gDefGrowthNum" Content="0" HorizontalAlignment="Left" Margin="194,372,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gManGrowthNum" Content="0" HorizontalAlignment="Left" Margin="215,372,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gAtcFromNowNum" Content="0" HorizontalAlignment="Left" Margin="370,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gDefFromNowNum" Content="0" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="gManFromNowNum" Content="0" HorizontalAlignment="Left" Margin="412,341,0,0" VerticalAlignment="Top"/>
+        <Button Content="Generate" HorizontalAlignment="Left" Margin="46,317,0,0" VerticalAlignment="Top" Click="Generate_Button_Click"/>
+        <Button Content="Growth" HorizontalAlignment="Left" Margin="46,354,0,0" VerticalAlignment="Top" Click="Growth_Button_Click"/>
+
+        <TextBox  x:Name="bAtcGrowthNum" HorizontalAlignment="Left" Margin="85,120,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bDefGrowthNum" HorizontalAlignment="Left" Margin="131,120,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bManGrowthNum" HorizontalAlignment="Left" Margin="177,120,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bbAtcGrowthNum" HorizontalAlignment="Left" Margin="236,80,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbDefGrowthNum" HorizontalAlignment="Left" Margin="282,80,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbManGrowthNum" HorizontalAlignment="Left" Margin="328,80,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bpAtcGrowthNum" HorizontalAlignment="Left" Margin="236,155,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpDefGrowthNum" HorizontalAlignment="Left" Margin="282,155,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpManGrowthNum" HorizontalAlignment="Left" Margin="328,155,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bbbAtcGrowthNum" HorizontalAlignment="Left" Margin="399,40,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbbDefGrowthNum" HorizontalAlignment="Left" Margin="445,40,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbbManGrowthNum" HorizontalAlignment="Left" Margin="491,40,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bbpAtcGrowthNum" HorizontalAlignment="Left" Margin="399,95,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbpDefGrowthNum" HorizontalAlignment="Left" Margin="445,95,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bbpManGrowthNum" HorizontalAlignment="Left" Margin="491,95,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bpbAtcGrowthNum" HorizontalAlignment="Left" Margin="399,135,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpbDefGrowthNum" HorizontalAlignment="Left" Margin="445,135,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bpbManGrowthNum" HorizontalAlignment="Left" Margin="491,135,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="bppAtcGrowthNum" HorizontalAlignment="Left" Margin="399,180,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bppDefGrowthNum" HorizontalAlignment="Left" Margin="445,180,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="bppManGrowthNum" HorizontalAlignment="Left" Margin="491,180,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+
+        <TextBox  x:Name="pAtcGrowthNum" HorizontalAlignment="Left" Margin="85,260,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="pDefGrowthNum" HorizontalAlignment="Left" Margin="131,260,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="pManGrowthNum" HorizontalAlignment="Left" Margin="177,260,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="29"/>
+        
+
+
+
+
+
+
+    </Grid>
+</Window>

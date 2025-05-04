@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\workspace\VisualStudioProject\ListSLG\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="window\BattleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\debug\BattleDebugWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\debug\GenerateDebugWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\HireWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\PlanningWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\AdvisorSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\AssignSeedingSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\BattleLogWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\BattleResultWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\BranchCreateSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\CreateCorpSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\GeneralSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\TechEnableSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\TechSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\subWindow\ValidationSubWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="window\TitleWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="window\BattleWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\debug\BattleDebugWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\debug\GenerateDebugWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\HireWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\PlanningWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\AdvisorSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\AssignSeedingSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\BattleLogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\BattleResultWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\BranchCreateSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\CreateCorpSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\GeneralSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\TechEnableSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\TechSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\subWindow\ValidationSubWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="window\TitleWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

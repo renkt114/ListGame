@@ -1,0 +1,43 @@
+﻿<Window x:Class="ListSLG.window.subWindow.BattleResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window.subWindow"
+        mc:Ignorable="d"
+        Title="BattleResultWindow" Height="450" Width="800"
+        WindowStyle="None">
+    <Grid>
+        <DataGrid  x:Name="AllyResultGrid" AutoGenerateColumns="false"  Margin="80,90,80,69">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="名前"
+                                        Binding="{Binding name}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="攻撃回数"
+                                        Binding="{Binding atkTimes}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="総撃破兵数"
+                                        Binding="{Binding atkSumNum}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="防御回数"
+                                        Binding="{Binding defTimes}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="総被害兵数"
+                                        Binding="{Binding defSumNum}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="ブロック成功数"
+                                        Binding="{Binding blockTimes}"
+                                        Width="100"
+                                        IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="ResultText" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="65" Width="380" TextAlignment="Center" FontSize="48"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="631,397,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="-1.584,0.651" Height="29" Width="107"/>
+
+    </Grid>
+</Window>

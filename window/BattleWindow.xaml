@@ -1,0 +1,311 @@
+﻿<Window x:Class="ListSLG.window.BattleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window"
+        mc:Ignorable="d"
+        Title="BattleWindow" Height="658" Width="1020"
+        WindowStyle="None">
+    <Grid>
+        <Grid Margin="61,72,49,72">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Image x:Name="AllyCIImage" Source="/resources/image/unit/inf1.png" Grid.Column="2" Grid.ColumnSpan="2" Margin="114,0,0,0" Grid.Row="3" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyCITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="4">
+                <ProgressBar x:Name="AllyCISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyCISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyCISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyRIImage" Source="/resources/image/unit/inf1.png" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,62,114,1" Grid.Row="3" Grid.RowSpan="2" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyRITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyRISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyRISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyRISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyLIImage" Source="/resources/image/unit/inf1.png" Grid.Column="1" Grid.ColumnSpan="3" Margin="113,62,113,62" Grid.RowSpan="3" Grid.Row="1" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyLITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyLISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyLISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyLISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyRCImage" Source="/resources/image/unit/Cav1.png" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,114,62" Grid.RowSpan="2" Grid.Row="6" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyRCTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyRCSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyRCSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyRCSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyLCImage" Source="/resources/image/unit/Cav1.png" Grid.ColumnSpan="2" Margin="0,0,114,62" Grid.RowSpan="2" Grid.Row="2" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyLCTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyLCSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyLCSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyLCSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyRRImage" Source="/resources/image/unit/range1.png" Grid.Column="1" Grid.ColumnSpan="2" Margin="113,10,0,62" Grid.RowSpan="2" Grid.Row="5" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyRRTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyRRSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyRRSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyRRSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="AllyLRImage" Source="/resources/image/unit/range1.png" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,10,113,0" Grid.Row="4" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="AllyLRTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="AllyLRSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="AllyLRSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="AllyLRSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyCIImage" Source="/resources/image/unit/EnInf1.png" Grid.Column="4" Margin="0,10,1,62" Grid.RowSpan="2" Grid.Row="2" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyCITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyCISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyCISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyCISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyRIImage" Source="/resources/image/unit/EnInf1.png" Grid.Column="3" Margin="1,10,0,62" Grid.RowSpan="2" Grid.Row="1" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyRITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyRISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyRISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyRISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyLIImage" Source="/resources/image/unit/EnInf1.png" Grid.Column="5" Grid.Row="3" Margin="0,10,0,0" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyLITranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyLISolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyLISolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyLISolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyRCImage" Source="/resources/image/unit/EnCav1.png" Grid.Column="2" Grid.ColumnSpan="2" Margin="114,-64,0,64" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyRCTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyRCSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyRCSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyRCSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyLCImage" Source="/resources/image/unit/EnCav1.png" Grid.Column="6" Grid.ColumnSpan="2" Margin="114,0,0,0" Grid.Row="3" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyLCTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyLCSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyLCSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyLCSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyRRImage" Source="/resources/image/unit/EnRange1.png" Grid.Column="5" Margin="0,10,0,0" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyRRTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyRRSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyRRSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyRRSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+            <Image x:Name="EnemyLRImage" Source="/resources/image/unit/EnRange1.png" Grid.Column="5" Grid.ColumnSpan="2" Margin="113,10,0,62" Grid.RowSpan="2" Grid.Row="1" >
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="EnemyLRTranslateTransform"/>
+                </Image.RenderTransform>
+            </Image>
+            <Grid Width="100" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ProgressBar x:Name="EnemyLRSolNumBar" Minimum="0" Maximum="100" Value="0" />
+                <Viewbox>
+                    <TextBlock x:Name="EnemyLRSolNumText" Text="0/0" TextAlignment="Center"/>
+                </Viewbox>
+                <Viewbox Margin="0,-15,0,15">
+                    <TextBlock x:Name="EnemyLRSolName" Text="-" TextAlignment ="Left" Width="100"/>
+                </Viewbox>
+            </Grid>
+
+        </Grid>
+
+        <Button x:Name ="BattleStartButton" Content="戦闘開始" HorizontalAlignment="Left" Margin="769,580,0,0" VerticalAlignment="Top" Click="Battle_Start_Normal" Height="36" Width="100"/>
+        <Button x:Name ="BattleStartShortButton" Content="短縮" HorizontalAlignment="Left" Margin="901,580,0,0" VerticalAlignment="Top" Click="Battle_Start_Short" Width="70" Height="36"/>
+
+        <!-- 兵数テキスト -->
+        <TextBlock Name="FadeTextBlock" FontSize="24" Foreground="Red"  Visibility="Collapsed"
+                   FontWeight="Bold"
+                   FontFamily="Segoe Script">
+            <TextBlock.RenderTransform>
+                <TranslateTransform x:Name="FadeTextBlockTransform"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+    </Grid>
+</Window>

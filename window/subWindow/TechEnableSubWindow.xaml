@@ -1,0 +1,55 @@
+﻿<Window x:Class="ListSLG.window.subWindow.TechEnableSubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window.subWindow"
+        mc:Ignorable="d"
+        Title="TechEnableSubWindow" Height="200" Width="300"
+        WindowStyle="None">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="techNameLabel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               Content="TechName" 
+               HorizontalAlignment="Left"
+                VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <Button Grid.Row="0" Grid.Column="5"
+            Content="戻る"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" Width="40" Click="Close_Button_Click"/>
+
+        <TextBlock x:Name="techInfoTextBlock" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Margin="5"
+               TextWrapping="Wrap"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top">
+        テストメッセージ
+        </TextBlock>
+
+        <Label x:Name="techCostLabel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5"
+               Content="威信xxを消費します。取り消せません。" 
+               HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+        <Button x:Name="techConfirmButton" Grid.Row="4" Grid.Column="2"
+            Content="採用"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" Width="40" Click="techConfirmButton_Click"/>
+
+    </Grid>
+</Window>

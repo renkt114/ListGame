@@ -1,0 +1,135 @@
+﻿<Window x:Class="ListSLG.window.debug.BattleDebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window.debug"
+        mc:Ignorable="d"
+        Title="BattleDebugWindow" Height="450" Width="800">
+
+    <Grid>
+        <TextBox  x:Name="AlCIAtcNum" HorizontalAlignment="Left" Margin="84,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlCIDefNum" HorizontalAlignment="Left" Margin="130,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlCIManNum" HorizontalAlignment="Left" Margin="175,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlCISolNum" HorizontalAlignment="Left" Margin="222,53,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnCIAtcNum" HorizontalAlignment="Left" Margin="400,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnCIDefNum" HorizontalAlignment="Left" Margin="446,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnCIManNum" HorizontalAlignment="Left" Margin="491,53,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnCISolNum" HorizontalAlignment="Left" Margin="537,53,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+
+        <Label x:Name="EnCISolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,49,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="EnCISolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,49,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="CIButton" HorizontalAlignment="Left" Margin="29,52,0,0" VerticalAlignment="Top" Click="CI_Button_Click"/>
+
+        <TextBox  x:Name="AlRIAtcNum" HorizontalAlignment="Left" Margin="84,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRIDefNum" HorizontalAlignment="Left" Margin="130,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRIManNum" HorizontalAlignment="Left" Margin="175,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRISolNum" HorizontalAlignment="Left" Margin="222,83,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnRIAtcNum" HorizontalAlignment="Left" Margin="400,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRIDefNum" HorizontalAlignment="Left" Margin="446,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRIManNum" HorizontalAlignment="Left" Margin="491,83,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRISolNum" HorizontalAlignment="Left" Margin="537,83,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnRISolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,79,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnRISolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,80,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="RIButton" HorizontalAlignment="Left" Margin="29,83,0,0" VerticalAlignment="Top" Click="RI_Button_Click"/>
+
+        <TextBox  x:Name="AlLIAtcNum" HorizontalAlignment="Left" Margin="84,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLIDefNum" HorizontalAlignment="Left" Margin="130,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLIManNum" HorizontalAlignment="Left" Margin="175,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLISolNum" HorizontalAlignment="Left" Margin="222,113,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnLIAtcNum" HorizontalAlignment="Left" Margin="400,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLIDefNum" HorizontalAlignment="Left" Margin="446,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLIManNum" HorizontalAlignment="Left" Margin="491,113,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLISolNum" HorizontalAlignment="Left" Margin="537,113,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnLISolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,111,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnLISolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,113,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="LIButton" HorizontalAlignment="Left" Margin="29,113,0,0" VerticalAlignment="Top" Click="LI_Button_Click"/>
+
+        <TextBox  x:Name="AlRCAtcNum" HorizontalAlignment="Left" Margin="84,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRCDefNum" HorizontalAlignment="Left" Margin="130,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRCManNum" HorizontalAlignment="Left" Margin="175,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRCSolNum" HorizontalAlignment="Left" Margin="222,143,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnRCAtcNum" HorizontalAlignment="Left" Margin="400,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRCDefNum" HorizontalAlignment="Left" Margin="446,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRCManNum" HorizontalAlignment="Left" Margin="491,143,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRCSolNum" HorizontalAlignment="Left" Margin="537,143,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnRCSolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,140,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnRCSolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,143,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="RCButton" HorizontalAlignment="Left" Margin="29,143,0,0" VerticalAlignment="Top" Click="RC_Button_Click"/>
+
+        <TextBox  x:Name="AlLCAtcNum" HorizontalAlignment="Left" Margin="84,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLCDefNum" HorizontalAlignment="Left" Margin="130,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLCManNum" HorizontalAlignment="Left" Margin="175,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLCSolNum" HorizontalAlignment="Left" Margin="222,173,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnLCAtcNum" HorizontalAlignment="Left" Margin="400,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLCDefNum" HorizontalAlignment="Left" Margin="446,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLCManNum" HorizontalAlignment="Left" Margin="491,173,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLCSolNum" HorizontalAlignment="Left" Margin="537,173,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnLCSolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,171,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnLCSolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,173,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="LCButton" HorizontalAlignment="Left" Margin="29,173,0,0" VerticalAlignment="Top" Click="LC_Button_Click"/>
+
+        <TextBox  x:Name="AlRRAtcNum" HorizontalAlignment="Left" Margin="84,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRRDefNum" HorizontalAlignment="Left" Margin="130,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRRManNum" HorizontalAlignment="Left" Margin="175,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlRRSolNum" HorizontalAlignment="Left" Margin="222,203,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnRRAtcNum" HorizontalAlignment="Left" Margin="400,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRRDefNum" HorizontalAlignment="Left" Margin="446,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRRManNum" HorizontalAlignment="Left" Margin="491,203,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnRRSolNum" HorizontalAlignment="Left" Margin="537,203,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnRRSolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,203,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnRRSolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,203,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="RRButton" HorizontalAlignment="Left" Margin="29,203,0,0" VerticalAlignment="Top" Click="RR_Button_Click"/>
+
+        <TextBox  x:Name="AlLRAtcNum" HorizontalAlignment="Left" Margin="84,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLRDefNum" HorizontalAlignment="Left" Margin="130,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLRManNum" HorizontalAlignment="Left" Margin="175,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="AlLRSolNum" HorizontalAlignment="Left" Margin="222,233,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="48"/>
+        <TextBox  x:Name="EnLRAtcNum" HorizontalAlignment="Left" Margin="400,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLRDefNum" HorizontalAlignment="Left" Margin="446,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLRManNum" HorizontalAlignment="Left" Margin="491,233,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="29"/>
+        <TextBox  x:Name="EnLRSolNum" HorizontalAlignment="Left" Margin="537,233,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="EnLRSolDamegeNum" Content="0" HorizontalAlignment="Left" Margin="600,230,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label x:Name="EnLRSolBlockNum" Content="0" HorizontalAlignment="Left" Margin="688,233,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button Content="LRButton" HorizontalAlignment="Left" Margin="29,233,0,0" VerticalAlignment="Top" Click="LR_Button_Click"/>
+
+
+        <Label x:Name="EnCISolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,49,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnRISolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,79,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnLISolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,111,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnRCSolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,140,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnLCSolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,171,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnRRSolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,203,0,0" VerticalAlignment="Top" Width="34"/>
+        <Label x:Name="EnLRSolDefNum" Content="0" HorizontalAlignment="Left" Margin="649,230,0,0" VerticalAlignment="Top" Width="34"/>
+
+        <Label x:Name="EnCISolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,49,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnRISolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,80,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnLISolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,111,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnRCSolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,140,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnLCSolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,171,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnRRSolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,203,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label x:Name="EnLRSolADamegeNum" Content="0" HorizontalAlignment="Left" Margin="733,230,0,0" VerticalAlignment="Top" Width="35"/>
+
+
+
+        <TextBox x:Name="BattleCountNum" HorizontalAlignment="Left" Margin="56,310,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120"/>
+
+        <DataGrid x:Name="ResultDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="341,339,44,29">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Value" Binding="{Binding}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="ALL" HorizontalAlignment="Left" Margin="56,372,0,0" VerticalAlignment="Top" Click="All_Button_Click"/>
+
+
+
+
+    </Grid>
+</Window>

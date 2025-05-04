@@ -1,0 +1,53 @@
+﻿<Window x:Class="ListSLG.window.PlanningWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window"
+        mc:Ignorable="d"
+        Title="PlanningWindow" Height="450" Width="800"
+        WindowStyle="None">
+    <Grid>
+        <ListBox x:Name="MissionListBox" 
+                 DisplayMemberPath="missionName"
+                 SelectedValuePath="missionId"
+                 SelectionChanged="MissionListBox_SelectionChanged" 
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Height="236"
+                 Width="200"
+                 Margin="36,30,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="10"/>
+        <TextBox x:Name="SelectedMissionText" HorizontalAlignment="Left" Height="236" Margin="260,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="471"/>
+        <Button Content="戻る" HorizontalAlignment="Left" Margin="36,370,0,0" VerticalAlignment="Top" Click="Planning_Phase_Remove_Button_Click" Height="25" Width="61"/>
+        <Label x:Name="ValidationLabel" Content="" HorizontalAlignment="Left" Margin="665,349,0,0" VerticalAlignment="Top" Width="113"/>
+        <DataGrid x:Name="CorpDataGrid"  Margin="147,282,69,18" AutoGenerateColumns="false" SelectionChanged="SelectionChanged_MouseDown">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No"
+                                        Binding="{Binding corpId}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="軍団名"
+                                        Binding="{Binding corpName}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="軍団長"
+                                        Binding="{Binding leaderName}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="部隊数"
+                                        Binding="{Binding troopNum}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="総兵数"
+                                        Binding="{Binding sumSoldiernum}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+                <DataGridTextColumn Header="任務"
+                                        Binding="{Binding assignMissionName}"
+                                        Width="Auto"
+                                        IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="ListSLG.window.TitleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListSLG.window"
+        mc:Ignorable="d"
+        Title="TitleWindow" Height="450" Width="800"
+        WindowStyle="None">
+    <Grid>
+        <Image Margin="56,27,56,68" Source="/resources/image/irast/titleimage.png" Stretch="Fill"/>
+        <Button Content="START" HorizontalAlignment="Center" Margin="0,383,0,0" VerticalAlignment="Top" Click="Start_Button_Click" Height="37" Width="150"/>
+    </Grid>
+</Window>
